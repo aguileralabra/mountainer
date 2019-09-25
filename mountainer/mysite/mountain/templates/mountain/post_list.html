@@ -10,7 +10,7 @@
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 		  <link rel="stylesheet" href="{% static 'css/boostrapdesign.css' %}">
-		  <link rel="icon" href="imagenes/logo.png">
+		  <link rel="icon" href="{% url 'imagenes/logo.png' %}">
 	</head>
 	<body>
 		<header>
@@ -33,27 +33,27 @@
 			</ol>
 			<div class="carousel-inner">
 			   <div class="item active">
-				<img src="imagenes/dientesnavarino.jpg" alt="dientes de navarino" style="width:100%;">
+				<img src="{% url 'imagenes/dientesnavarino.jpg' %}" alt="dientes de navarino" style="width:100%;">
                <div class="centrado">Dientes de Navarino </div>
 			  </div>
 			  <div class="item">
-				<img src="imagenes/outdoor.jpg" alt="parque cordillera" style="width:100%;">
+				<img src="{% url 'imagenes/outdoor.jpg' %}" alt="parque cordillera" style="width:100%;">
                   <div class="centrado">Parque Cordillera</div>
 			  </div>
 			  <div class="item">
-				<img src="imagenes/torres.jpg" alt="torres" style="width:100%;">
+				<img src="{% url 'imagenes/torres.jpg' %}" alt="torres" style="width:100%;">
                  <div class="centrado">Torres del Paine</div>
 			  </div>
 			  <div class="item">
-				<img src="imagenes/mountain.jpg" alt="travel" style="width:100%;">
+				<img src="{% url 'imagenes/mountain.jpg' %}" alt="travel" style="width:100%;">
                  <div class="centrado">Campos de Hielo Norte</div>
 			  </div>
 			  	<div class="item">
-				<img src="imagenes/glaciarventisquero.jpg" alt="glaciar ventisquero colgante" style="width:100%;">
+				<img src="{% url 'imagenes/glaciarventisquero.jpg' %}" alt="glaciar ventisquero colgante" style="width:100%;">
                  <div class="centrado">Glaciar Ventisquero Colgante</div>
 			  </div>
 			  	<div class="item">
-				<img src="imagenes/volcan.jpg" alt="volcan villarrica" style="width:100%;">
+				<img src="{% url 'imagenes/volcan.jpg' %}" alt="volcan villarrica" style="width:100%;">
                  <div class="centrado">Volcan Villarrica</div>
 			  </div>
 			</div>
@@ -87,9 +87,9 @@
 				</div>
 				<div id="contenido3">
 					<p>
-		     		<img src="imagenes/condor.jpg" alt="condor">
-			    	<img src="imagenes/puma.jpg" alt="puma">
-					<img src="imagenes/ballena.jpg" alt="ballena">
+		     		<img src="{% url 'imagenes/condor.jpg' %}" alt="condor">
+			    	<img src="{% url 'imagenes/puma.jpg' %}" alt="puma">
+					<img src="{% url 'imagenes/ballena.jpg' %}" alt="ballena">
 					</p>
 				</div>
 			<div id="contenido4">
@@ -119,10 +119,10 @@
 						Glaciar Grey y Lago Turquesa, luego camping de Conaf para ir al Mirador Britanico y por ultimo trekking hasta las Base de las Torres.
 					</p>
 					<p>
-					<img src="imagenes/basetorre.jpg" alt="base torres">
-			    	<img src="imagenes/glaciargrey.jpg" alt="glaciar grey">
-				    <img src="imagenes/miradorbritanico.jpg" alt="mirador britanico">
-					<img src="imagenes/mirador.jpg" alt="mirador">
+					<img src="{% url 'imagenes/basetorre.jpg' %}" alt="base torres">
+			    	<img src="{% url 'imagenes/glaciargrey.jpg' %}" alt="glaciar grey">
+				    <img src="{% url 'imagenes/miradorbritanico.jpg' %}" alt="mirador britanico">
+					<img src="{% url 'imagenes/mirador.jpg' %}" alt="mirador">
 					</p>
 				</div>
 		</div>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="es">
 	<head>
 		  <title>Inicio Mountain Break</title>
@@ -7,10 +8,10 @@
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		  <link rel="stylesheet" href="css/style.css">
-		  <link rel="stylesheet" href="css/contacto.css">
-		  <link rel="stylesheet" href="css/boostrapdesign.css">
-		  <link rel="icon" href="imagenes/logo.png">
+		  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+		  <link rel="stylesheet" href="{% static 'css/contacto.css' %}">
+		  <link rel="stylesheet" href="{% static 'css/boostrapdesign.css' %}">
+		  <link rel="icon" href="{% static 'imagenes/logo.png' %}">
 	</head>
 	<body>
 		<header>
@@ -40,10 +41,10 @@
 		</div>
 		<div class="contenedorprueba">
 			<h2>Siguenos en nuestras redes sociales</h2>
-			<a href=""><img src="imagenes/instagram.png" alt="instagram"></a>
-			<a href=""><img src="imagenes/whatsapp.png" alt="whatsapp"></a>
-			<a href=""><img src="imagenes/facebook.png" alt="facebook"></a>
-			<a href=""><img src="imagenes/gmail.png" alt="gmail"></a>
+			<a href=""><img src="{% static 'imagenes/instagram.png' %}" alt="instagram"></a>
+			<a href=""><img src="{% static 'imagenes/whatsapp.png' %}" alt="whatsapp"></a>
+			<a href=""><img src="{% static 'imagenes/facebook.png' %}" alt="facebook"></a>
+			<a href=""><img src="{% static 'imagenes/gmail.png' %}" alt="gmail"></a>
 		</div>
 	  </div>
 	  <footer>
