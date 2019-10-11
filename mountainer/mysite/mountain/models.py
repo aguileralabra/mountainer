@@ -16,3 +16,6 @@ class Imagen(models.Model):
 	
 def __str__(self):
         return self.Nombre
+
+def __str__(self):
+        return self.link
