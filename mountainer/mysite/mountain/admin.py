@@ -8,7 +8,8 @@ class TuristAdmin(admin.ModelAdmin):
 
 class ImagenAdmin(admin.ModelAdmin):
     list_display = ('link','Titulos','Descripcion')
-    search_fields = ['link']
+    search_fields = ['Titulos']
+    list_filter = ('Titulos',)
 
 admin.site.register(Turist, TuristAdmin)
 admin.site.register(Imagen, ImagenAdmin)
