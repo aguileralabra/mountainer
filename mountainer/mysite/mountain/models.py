@@ -3,7 +3,7 @@ from django.db import models
 class Turist(models.Model):
     Nombre = models.CharField(max_length=50, null = True)
     Apellido = models.CharField(max_length=50, null = True)
-    telefono = models.IntegerField( null = True)
+    telefono = models.IntegerField(null = True)
     pais = models.CharField(max_length=50, default="")
     lugar = models.CharField(max_length=50, default="")
     Opinion = models.TextField(null = True )
