@@ -9,5 +9,6 @@ urlpatterns = [
 ]
 
 admin.site.site_header = "Administracion de Mountain Break"
+admin.site.index_title = "Mountain Break ADMINISTRACION"
 
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
