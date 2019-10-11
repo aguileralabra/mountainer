@@ -3,9 +3,12 @@ from .models import Turist, Imagen
 
 class TuristAdmin(admin.ModelAdmin):
     list_display = ('Nombre','Apellido','telefono','pais','lugar','Opinion')
+    search_fields = ['Nombre']
+    list_filter = ('lugar',)
 
 class ImagenAdmin(admin.ModelAdmin):
     list_display = ('link','titulos','descripcion')
+    search_fields = ['link']
 
 admin.site.register(Turist, TuristAdmin)
 admin.site.register(Imagen, ImagenAdmin)
