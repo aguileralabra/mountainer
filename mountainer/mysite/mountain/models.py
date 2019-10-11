@@ -11,7 +11,7 @@ class Turist(models.Model):
 
 class Imagen(models.Model):
     link = models.CharField(max_length=200)
-    Titulo = models.CharField(max_length=20)
+    Titulos = models.CharField(max_length=20)
     Descripcion = models.CharField(max_length=20)
 	
 def __str__(self):
