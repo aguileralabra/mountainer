@@ -8,6 +8,6 @@ urlpatterns = [
 	path('', include('mountain.urls')),
 ]
 
-admin.site.site.header = "Administracion de Mountain Break"
+admin.site.site_header = "Administracion de Mountain Break"
 
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
