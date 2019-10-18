@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+import uuid
 
 class Turist(models.Model):
     Nombre = models.CharField(max_length=50, null = True)
