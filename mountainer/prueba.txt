@@ -3,8 +3,9 @@
 user: jordanaguilera   
 password: afes123456
 
-Natalia Campos
 
-Cristian
+Cristian Salinas
 
 Jordan Aguilera
+
+Nombre del Entorno Virtual es myvenv

@@ -1,33 +1,8 @@
+{% extends "base_generic.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		  <title>Inicio Mountain Break</title>
-		  <meta charset="utf-8">
-		  <meta name="viewport" content="width=device-width, initial-scale=1">
-		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-		  <link rel="stylesheet" href="{% static 'css/formulario.css' %}">
-		  <link rel="stylesheet" href="{% static 'css/boostrapdesign.css' %}">
-		  <link rel="icon" href="{% static 'imagenes/logo.png' %}">
-		  <script src="js/validaciones.js"></script>
-		  <script src="js/validacion1.js"></script>
-		  <script src="jquery/jquery-3.4.1.js"></script>
-	</head>
-	<body>
-		<header>
-			<h1> Mountain Break</h1>
-		</header>
-		<nav>
-		<ul>
-		  <li><a href="{% url 'post_list' %}">Inicio</a></li>
-		  <li><a href="{% url 'formulario' %}">Registro</a></li>
-		  <li><a href="{% url 'galeria' %}">Galeria</a></li>
-		  <li><a href="{% url 'contacto' %}">Contacto</a></li>
-		</ul>
-	  </nav>
+
+{% block content %}
 	  <form  id="maining" action="formulario.html" method="POST" onsubmit="return validar()">
 		<h4>Registro de salida</h4>
         <input type="text" name="nombre" placeholder="Ingrese su nombre" onkeypress="return sololetras(event)" >
@@ -62,8 +37,4 @@
 		</select>
         <input type="submit" value="registrar">
 	  </form>
-	  <footer>
-		<p>@Derechos Reservados para Mountain Break</p>
-	</footer>
-</body>
-</html>
+	  {% endblock %}
