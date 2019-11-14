@@ -24,32 +24,8 @@
     <div class="label-grupos">
     {{ form.Opinion}}
     </div>
-
-    
-
-    <input type="submit" class="btn">Guardar</button>
+    <input type="submit" class="btn"></button>
 
 </form>
-
-
-
-<h1>Lista De Turistas registrados</h1>
-
-{% if turist_list %}
-<ul>
-
-  {% for turist in turist_list %}
-  <li>
-    <a href="{{ Turist.get_absolute_url }}">{{ turist.title }}</a>
-  </li>
-  {% endfor %}
-
-</ul>
-
-{% else %}
-  <p>No Hay turistas registrados</p>
-{% endif %} 
-
-
 
 {% endblock %}

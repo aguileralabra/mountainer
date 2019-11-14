@@ -8,7 +8,6 @@ urlpatterns = [
     path('editar',views.editarTurist,name='editar'),
     path('galeria', views.galeria, name='galeria'),
     path('contacto', views.contacto, name='contacto'),
-    path('imagen/', views.TuristListView.as_view(), name='turist'),
-    path('imagen/<int:pk>', views.TuristDetailView.as_view(), name='turist-detail'),
-
+    path('turists/', views.TuristListView.as_view(), name='turists'),
+    path('turists/<int:pk>', views.TuristDetailView.as_view(), name='turist-detail'),
 ]
