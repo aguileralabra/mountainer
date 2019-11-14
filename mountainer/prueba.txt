@@ -11,3 +11,5 @@ Jordan Aguilera
 Nombre del Entorno Virtual es myvenv
 
 El servidor se levanta con el comando "python manage.py runserver"
+
+"Primera entrega Unidad 2 CRUD sección 002D
