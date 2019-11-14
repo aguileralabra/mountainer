@@ -25,7 +25,7 @@ class TuristCrear(forms.ModelForm):
 			'placeholder': 'Escriba su numero Telefonico'
 		}
 	))
-	pais = forms.CharField(widget=forms.Select(
+	pais = forms.CharField(widget=forms.TextInput(
 
 		attrs={
 			'class': 'form-control',
@@ -39,7 +39,7 @@ class TuristCrear(forms.ModelForm):
 			'placeholder': 'Escriba el lugar deseado de ir'
 		}
 	))	
-	Opinion = forms.CharField(widget=forms.Textarea(
+	Opinion = forms.CharField(widget=forms.TextInput(
 
 		attrs={
 			'class': 'form-control',

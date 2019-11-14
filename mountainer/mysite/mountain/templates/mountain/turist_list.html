@@ -2,21 +2,50 @@
 {% load static %}
 
 {% block content %}
-<h1>Lista De Turistas registrados</h1>
 
-{% if turist_list %}
-<ul>
+<div id="listaturista">
+  <h1>Lista De Turistas registrados</h1>
 
-  {% for turist in turist_list %}
-  <li>
-    <a href="{{ turist.get_absolute_url }}">{{ turist.Nombre }}</a>
-  </li>
-  {% endfor %}
+  {% if turist_list %}
+  <ul>
+    <h2>Turistas</h2>
+    {% for turist in turist_list %}
 
-</ul>
+    <li>
+      <a href="{{ turist.get_absolute_url }}">{{ turist.Nombre }}</a>
+      <a href="{{ turist.get_absolute_url }}">{{ turist.Apellido }}</a>
+      <a href="{{ turist.get_absolute_url }}">{{ turist.telefono }}</a>
+      <a href="{{ turist.get_absolute_url }}">{{ turist.pais }}</a>
+      <a href="{{ turist.get_absolute_url }}">{{ turist.lugar }}</a>
+      <a href="{{ turist.get_absolute_url }}">{{ turist.Opinion }}</a>
+    </li>
+    {% endfor %}
 
-{% else %}
-  <p>No Hay turistas registrados</p>
-{% endif %} 
+  </ul>
+  <div id="botoneslista">
+    <a href="{% url 'galeria' %}">Actualizar</a>
+    <a href="{% url 'contacto' %}">Eliminar</a>
+  </div>
 
+
+  {% else %}
+
+
+  <div id="listaturista">
+    <h1>No Hay turistas registrados, favor de registrar turistas</h1>
+  </ul>
+  <h2>Error 404</h2>
+  <div id="botonregreso">
+      <a href="{% url 'FormularioTurist' %}">Registro</a>
+  </div>
+  </ul>
+  </div>
+
+  <br>
+  <br>
+  {% endif %} 
+  <br>
+  <br>
+
+</div>
 {% endblock %}
