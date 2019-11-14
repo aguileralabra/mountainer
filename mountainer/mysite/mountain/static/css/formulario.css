@@ -33,6 +33,17 @@ h4{
     padding: 10px;
 }
 
+.label-grupos{
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 500px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    margin: 20px auto;
+    color:black;
+}
+
 
 select{
     outline: none;
