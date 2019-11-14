@@ -8,7 +8,6 @@ class Turist(models.Model):
     telefono = models.IntegerField(null = True)
     pais = models.CharField(max_length=50, default="")
     lugar = models.CharField(max_length=50, default="")
-    date_of_birth = models.DateField(null=True, blank=True)
     Opinion = models.TextField(null = True )
 
     def __str__(self):

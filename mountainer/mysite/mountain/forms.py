@@ -14,6 +14,5 @@ class TuristCrear(forms.ModelForm):
 			'telefono',
 			'pais',
 			'lugar',
-			'date_of_birth',			
 			'Opinion',
 		]
