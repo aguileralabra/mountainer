@@ -9,3 +9,5 @@ Cristian Salinas
 Jordan Aguilera
 
 Nombre del Entorno Virtual es myvenv
+
+El servidor se levanta con el comando "python manage.py runserver"
