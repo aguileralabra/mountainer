@@ -4,9 +4,11 @@
 
 {% block content %}
 <form method="post">
+    <h4>Registro de salida</h4>
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class="btn">Guardar</button>
+
 </form>
 
 
@@ -25,6 +27,6 @@
 </ul>
 
 {% else %}
-  <p>No Hay turistas registrados Agregados</p>
+  <p>No Hay turistas registrados</p>
 {% endif %} 
 {% endblock %}
