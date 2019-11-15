@@ -75,8 +75,8 @@ def crearImagen(request):
 
 		return render(request,'Propuestas.html',{'form':form})
 
-def hecho(request):
-    return render(request,'hecho.html')
+def resultadoimagen(request):
+    return render(request,'resultadoimagen.html')
 
 
 def editarImagen(request):
