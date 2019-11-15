@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+<div id="resultadolisto">
+<br> <br> <br> 
+<h2>Propuesta Ingresada</h2>
+<p>Su ingreso ha sido correctamente ingresado</p>
+<p>Si es aceptada su propuesta, se subira al inicio de la web</p>
+
+<div id="botonregreso">
+        <a href="{% url 'Propuestas' %}">Volver</a>
+</div>
+<br> <br> <br> 
+</div>
+{% endblock %}

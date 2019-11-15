@@ -1,5 +1,5 @@
 from django import forms
-from .models import Turist
+from .models import Turist, Imagen
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
@@ -57,4 +57,37 @@ class TuristCrear(forms.ModelForm):
 			'pais',
 			'lugar',
 			'Opinion',
+		]
+
+
+
+class ImagenCrear(forms.ModelForm):
+	link = forms.CharField(widget=forms.TextInput(
+
+		attrs={
+			'class': 'form-control',
+			'placeholder': 'Escriba la ruta de la imagen'
+		}
+	))
+	Titulos = forms.CharField(widget=forms.TextInput(
+
+		attrs={
+			'class': 'form-control',
+			'placeholder': 'Escriba el Titulo'
+		}
+	))
+	Descripcion = forms.CharField(widget=forms.TextInput(
+
+		attrs={
+			'class': 'form-control',
+			'placeholder': 'Escriba una descripcion de la imagen'
+		}
+	))
+	class Meta:
+		model = Imagen
+
+		fields = [
+			'link',
+			'Titulos',
+			'Descripcion',
 		]
