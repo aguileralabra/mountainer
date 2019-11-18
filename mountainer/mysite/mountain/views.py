@@ -92,6 +92,6 @@ def editimagen(request, imagen_id):
 
 def deleteimagen(request, imagen_id):
     instancia = Imagen.objects.get(id=imagen_id)
-    instancia.deleteimagen()
+    instancia.delete()
 
-    return render(request,'index.html')
+    return render(request,'resultadoeliminarimagen.html')
