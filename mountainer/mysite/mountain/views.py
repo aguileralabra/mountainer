@@ -17,6 +17,14 @@ class TuristListView(generic.ListView):
 class TuristDetailView(generic.DetailView):
     model = Turist
 
+def delete(request, turist_id):
+    instancia = Turist.objects.get(id=turist_id)
+    instancia.delete()
+
+    return render('/')
+
+
+
 def crearTurist(request):
 	if request.method =='POST':
 		form = TuristCrear(request.POST)

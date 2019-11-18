@@ -17,6 +17,7 @@ class Turist(models.Model):
         verbose_name = "Turist"
         verbose_name_plural = "Turistas"
 
+
 class Imagen(models.Model):
     link = models.CharField(max_length=200)
     Titulos = models.CharField(max_length=20)

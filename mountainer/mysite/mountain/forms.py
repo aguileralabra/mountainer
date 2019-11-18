@@ -66,7 +66,7 @@ class ImagenCrear(forms.ModelForm):
 
 		attrs={
 			'class': 'form-control',
-			'placeholder': 'Escriba la ruta de la imagen'
+			'placeholder': 'Escriba la ruta de la imagen(link)'
 		}
 	))
 	Titulos = forms.CharField(widget=forms.TextInput(

@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Eliminar Turista</h1>
+
+<form action="" method="POST">
+{% csrf_token %}
+<p>Estas seguro que deseas eliminar al turista : ""{{ turist }}"?</p>
+<input type="submit" action="" value="si, eliminar"/>
+</form>
+{% endblock %}
