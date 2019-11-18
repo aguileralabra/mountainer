@@ -59,12 +59,6 @@ def index(request):
     num_imagen=Imagen.objects.all().count()
     return render(request, 'index.html', context={'num_imagen':num_imagen},)
 	
-
-
-
-
-
-    
 class ImagenListView(generic.ListView):
     model = Imagen
     paginate_by = 10
@@ -86,13 +80,18 @@ def crearImagen(request):
 def resultadoimagen(request):
     return render(request,'resultadoimagen.html')
 
-
-def editarImagen(request):
+def editimagen(request, imagen_id):
+    instancia = Imagen.objects.get(id=imagen_id)
+    form = ImagenCrear(instance=instancia)
     if request.method == "POST":
-        form = ImagenCrear(request.POST)
+        form = ImagenCrear(request.POST, instance=instancia)
         if form.is_valid():
-            form = form.save(commit=False)
-            form.save()
-    else:
-        form = ImagenCrear()
-    return render(request, 'editar.html', {'form': form})
+            instancia = form.save(commit=False)
+            instancia.save()
+    return render(request, "editimagen.html", {'form': form})
+
+def deleteimagen(request, imagen_id):
+    instancia = Imagen.objects.get(id=imagen_id)
+    instancia.deleteimagen()
+
+    return render(request,'index.html')

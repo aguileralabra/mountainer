@@ -15,6 +15,11 @@
             <a href="{{ imagen.get_absolute_url }}"><img src="{{ imagen.link }}" alt="imagen"></a>
             <a href="{{ imagen.get_absolute_url }}">{{ imagen.Titulos }}</a>
             <a href="{{ imagen.get_absolute_url }}">{{ imagen.Descripcion }}</a>
+            <div id="botoneslista">
+              <a href="/editimagen/{{ imagen.id }}">Actualizar</a>
+              <a href="/deleteimagen/{{ imagen.id }}"
+              onClick="return confirm(' ¿desea elimianar a {{imagen.Titulos }}?');">Eliminar</a>
+            </div>
           </li>
           {% endfor %}
       

@@ -28,6 +28,9 @@ class Imagen(models.Model):
     def __str__(self):
         return self.link
 
+    def get_absolute_url(self):
+         return reverse('imagen-detail', kwargs={'pk': self.pk})
+
     class meta:
         verbose_name = "Imagen"
         verbose_name_plural = "Imagenes"
