@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+<div id="resultadolisto">
+<br> <br> <br> 
+<h2>Turista Eliminado</h2>
+<p>se ha eliminado correctamente el turista</p>
+
+<div id="botonregreso">
+        <a href="{% url 'turists' %}">Ir a lista de Turista</a>
+</div>
+<br> <br> <br> 
+</div>
+{% endblock %}

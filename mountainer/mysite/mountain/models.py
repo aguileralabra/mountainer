@@ -13,10 +13,12 @@ class Turist(models.Model):
     def __str__(self):
         return self.Nombre
 
+    def get_absolute_url(self):
+        return reverse('turist-detail', kwargs={'pk': self.pk})
+
     class meta:
         verbose_name = "Turist"
         verbose_name_plural = "Turistas"
-
 
 class Imagen(models.Model):
     link = models.CharField(max_length=200)

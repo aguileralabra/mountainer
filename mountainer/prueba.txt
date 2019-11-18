@@ -12,4 +12,7 @@ Nombre del Entorno Virtual es myvenv
 
 El servidor se levanta con el comando "python manage.py runserver"
 
+https://www.hektorprofe.net/tutorial/django-formularios-crear-editar-instancias
+Crud use de aqui el elimianr y editar.
+
 "Primera entrega Unidad 2 CRUD sección 002D

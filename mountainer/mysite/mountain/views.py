@@ -21,8 +21,7 @@ def delete(request, turist_id):
     instancia = Turist.objects.get(id=turist_id)
     instancia.delete()
 
-    return render('/')
-
+    return render(request,'deleterespuesta.html')
 
 
 def crearTurist(request):
