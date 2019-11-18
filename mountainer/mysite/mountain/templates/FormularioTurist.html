@@ -3,30 +3,19 @@
 
 
 {% block content %}
-<form id="maining" method="post">
+<div id="listaturista">
+<form id="" method="post">
     <h4>Registro de salida</h4>
     {% csrf_token %}
-    <div class="label-grupos">
     {{ form.Nombre}}
-    </div>
-    <div class="label-grupos">
     {{ form.Apellido}}
-    </div>
-    <div class="label-grupos">
     {{ form.telefono}}
-    </div>
-    <div class="label-grupos">
     {{ form.pais}}
-    </div>  
-    <div class="label-grupos">
     {{ form.lugar}}
-     </div>        
-    <div class="label-grupos">
     {{ form.Opinion}}
-    </div>
     <br>
     <input type="submit" class="btn"></button>
 
 </form>
-
+</div>
 {% endblock %}

@@ -5,6 +5,7 @@
     {% block title %}<title>Mountain Break</title>{% endblock %}
 		  <meta charset="utf-8">
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -22,17 +23,29 @@
 			<h1> Mountain Break</h1>
         </header>
     {% block sidebar %}
-		<nav>
-		<ul>
-		  <li><a href="{% url 'index' %}">Inicio</a></li>
-		  <li><a href="{% url 'FormularioTurist' %}">Registro Turista</a></li>
-		  <li><a href="{% url 'turists' %}">Lista de turista</a></li>
-		  <li><a href="{% url 'Propuestas' %}">Registro Propuesta</a></li>
-		  <li><a href="{% url 'imagens' %}">Galeria propuesta</a></li>
-		  <li><a href="{% url 'galeria' %}">Galeria Común</a></li>
-		  <li><a href="{% url 'contacto' %}">Contacto</a></li>
-		</ul>
-      </nav>
+	  <div class="topnav" id="myTopnav">
+    <a href="{% url 'index' %}" class="active">Inicio</a>
+	<a href="{% url 'FormularioTurist' %}">Registro Turista</a>
+	<a href="{% url 'turists' %}">Lista de turista</a>
+	<a href="{% url 'Propuestas' %}">Registro Propuesta</a>
+	<a href="{% url 'imagens' %}">Galeria propuesta</a>
+	<a href="{% url 'galeria' %}">Galeria Común</a>
+	<a href="{% url 'contacto' %}">Contacto</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+	  </div>
+
+	  <script>
+	  function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+		  x.className += " responsive";
+		} else {
+		  x.className = "topnav";
+		}
+	  }
+	  </script>
     {% endblock %}
     {% block content %}{% endblock %}
       <footer>
