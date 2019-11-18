@@ -19,11 +19,12 @@
       <a href="{{ turist.get_absolute_url }}">{{ turist.pais }}</a>
       <a href="{{ turist.get_absolute_url }}">{{ turist.lugar }}</a>
       <a href="{{ turist.get_absolute_url }}">{{ turist.Opinion }}</a>
+
       <div id="botoneslista">
-      <a href="{% url 'index' %}">Actualizar</a>
+      <a href="/edit/{{ turist.id }}">Actualizar</a>
       <a href="/delete/{{ turist.id }}"
       onClick="return confirm(' ¿desea elimianar a {{turist.Nombre }}?');">Eliminar</a>
-        </div>
+      </div>
       </li>
     {% endfor %}
 

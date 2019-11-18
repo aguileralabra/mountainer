@@ -39,15 +39,15 @@ def resultado(request):
     return render(request,'resultado.html')
 
 
-def editarTurist(request):
+def edit(request, turist_id):
+    instancia = Turist.objects.get(id=turist_id)
+    form = TuristCrear(instance=instancia)
     if request.method == "POST":
-        form = TuristCrear(request.POST)
+        form = TuristCrear(request.POST, instance=instancia)
         if form.is_valid():
-            form = form.save(commit=False)
-            form.save()
-    else:
-        form = TuristCrear()
-    return render(request, 'editar.html', {'form': form})
+            instancia = form.save(commit=False)
+            instancia.save()
+    return render(request, "edit.html", {'form': form})
 
 def galeria(request):
     return render(request, 'galeria.html', {})
@@ -55,15 +55,16 @@ def galeria(request):
 def contacto(request):
     return render(request, 'contacto.html', {})
 
-
-
-
-
 def index(request):
     num_imagen=Imagen.objects.all().count()
     return render(request, 'index.html', context={'num_imagen':num_imagen},)
 	
 
+
+
+
+
+    
 class ImagenListView(generic.ListView):
     model = Imagen
     paginate_by = 10

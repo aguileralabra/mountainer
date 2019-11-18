@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+<div id="listaturista">
+<form method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p>¡Recuerde, que no hay vuelta atras!</p>
+    <input type="submit" onClick="listo" class="btn" value="Aceptar Cambios"></button>
+</form>
+</div>
+{% endblock %}

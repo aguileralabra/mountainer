@@ -7,7 +7,7 @@ urlpatterns = [
     #path('turists/<int:pk>/delete/', views.TuristDelete.as_view(), name='turist-delete'),
     path('Propuestas',views.crearImagen,name='Propuestas'),
     path('resultado',views.resultado,name='resultado'),
-    path('editar',views.editarTurist,name='editar'),
+    path('edit/<int:turist_id>', views.edit),
     path('delete/<int:turist_id>', views.delete),
     path('galeria', views.galeria, name='galeria'),
     path('contacto', views.contacto, name='contacto'),
