@@ -7,6 +7,8 @@
     {{ form.as_p }}
     {% csrf_token %}
     <p>¡Recuerde, que no hay vuelta atras!</p>
+    <p>Click debajo para volver a la lista</p>
+    <p><a href="{% url 'turists' %}">Volver a lista de Turista</a></p>
     <input type="submit" onClick="listo" class="btn" value="Aceptar Cambios"></button>
 </form>
 </div>
