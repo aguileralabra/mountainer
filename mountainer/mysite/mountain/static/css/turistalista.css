@@ -71,3 +71,47 @@ text-align: center;
 #titulo2{
     color: orange;
 }
+
+
+/*------------------------------
+
+*/
+
+
+.container{
+    margin-top: 8%;
+    margin-bottom: 5%;
+    background: rgba(0, 0, 0, 0.521);
+    width: 100%;
+}
+
+.container a{
+    color:orange;
+    text-align: center;
+    padding: 10px;
+}
+
+.container h1, p{
+    color: white;
+    text-align: center;
+}
+
+.container td{
+color:rgb(3, 3, 3);
+background-color: white;
+padding: 5px;
+}
+
+.container td a{
+    background-color: rgb(238, 165, 6);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.container thead{
+    color:rgb(255, 255, 255);
+    background-color: rgb(1, 164, 86);
+    border: 2px solid rgb(253, 253, 253);
+    border-radius: 5px;
+}

@@ -3,38 +3,56 @@
 
 {% block content %}
 
-<div id="listaturista">
-  <h1>Lista De Turistas registrados</h1>
 
+
+<div class="container">
+  
+  <h1>Listado de Turistas</h1>
+  <div style="height:50px"></div>
+  <p class="lead">
+  <p>Aqui podra encontrar a todos los turistas que desean salir a una travesia</p>
+  <p>en caso de no encontrar a simple vista a un turista, esta el buscador</p>
+  <br>
+  <hr>
+  <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscador..">
+  <br>
+  <br>
   {% if turist_list %}
-  <ul>
-    <h2>Turistas</h2>
-    {% for turist in turist_list %}
-
-    <li>
-
-      <a href="{{ turist.get_absolute_url }}">{{ turist.Nombre }}</a>
-      <a href="{{ turist.get_absolute_url }}">{{ turist.Apellido }}</a>
-      <a href="{{ turist.get_absolute_url }}">{{ turist.telefono }}</a>
-      <a href="{{ turist.get_absolute_url }}">{{ turist.pais }}</a>
-      <a href="{{ turist.get_absolute_url }}">{{ turist.lugar }}</a>
-      <a href="{{ turist.get_absolute_url }}">{{ turist.Opinion }}</a>
-
-      <div id="botoneslista">
-      <a href="/edit/{{ turist.id }}">Actualizar</a>
-      <a href="/delete/{{ turist.id }}"
-      onClick="return confirm(' ¿desea elimianar a {{turist.Nombre }}?');">Eliminar</a>
-      </div>
-      </li>
+  <table class="table table-bordered order-table ">
+    <thead>
+    <div class="nombrestr">
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>telefono</th>
+        <th>pais</th>
+        <th>destino</th>
+        <th>Opinion</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+  </div>
+    <tr>
+        {% for turist in turist_list %}
+      <td>{{ turist.Nombre }}</td>
+      <td>{{ turist.Apellido }}</td>
+      <td>{{ turist.telefono }}</td>
+      <td>{{ turist.pais }}</td>
+      <td>{{ turist.lugar }}</td>
+      <td>{{ turist.Opinion }}</td>
+        <td><a href="/edit/{{ turist.id }}">Actualizar</a></td>
+        <td><a href="/delete/{{ turist.id }}"
+          onClick="return confirm(' ¿desea eliminar a {{imagen.Nombre }}?');">Eliminar</a></td>
+    </tr>
     {% endfor %}
-
-  </ul>
-
-
+  </table>
+  <p>Si desea ir al formulario a registrarse ingresar al siguiente link<a href="{% url 'FormularioTurist' %}">Registro Turista</a></p>
+	
+  </div>
+  
 
   {% else %}
-
-
   <div id="listaturista">
     <h1>No Hay turistas registrados, favor de registrar turistas</h1>
   </ul>
