@@ -1,42 +1,42 @@
+
 {% extends "base_generic.html" %}
 {% load static %}
 
 {% block content %}
-  
-<div id="listaturista">
-        <h1>Galeria de propuestas</h1>
+<div id="titulooooo">
+<h1>Galeria de propuestas</h1>
+</div>
+<div id="listarimagenes">
       
-        {% if imagen_list %}
-        <ul>
-          <h2>Rutas propuestas</h2>
-          {% for imagen in imagen_list %}
+  {% if imagen_list %}
+  <ul>
+      {% for imagen in imagen_list %}
       
-          <li>
-            <a href="{{ imagen.get_absolute_url }}"><img src="{{ imagen.link }}" alt="imagen"></a>
-            <a href="{{ imagen.get_absolute_url }}">{{ imagen.Titulos }}</a>
-            <a href="{{ imagen.get_absolute_url }}">{{ imagen.Descripcion }}</a>
-            <div id="botoneslista">
-              <a href="/editimagen/{{ imagen.id }}">Actualizar</a>
-              <a href="/deleteimagen/{{ imagen.id }}"
-              onClick="return confirm(' ¿desea eliminar a {{imagen.Titulos }}?');">Eliminar</a>
-            </div>
-          </li>
-          {% endfor %}
-      
-        </ul>   
-      
-        {% else %}
-      
-      
-        <div id="listaturista">
-          <h1>No hay nuevas rutas registradas</h1>
-        </ul>
+      <li>
+      <img src="{{ imagen.link }}" alt="imagen">
+        <a href="{{ imagen.get_absolute_url }}">{{ imagen.Titulos }}</a>
+        <a href="{{ imagen.get_absolute_url }}">{{ imagen.Descripcion }}</a>
+        <div id="botoneslista">
+          <a href="/editimagen/{{ imagen.id }}">Actualizar</a>
+          <a href="/deleteimagen/{{ imagen.id }}"
+          onClick="return confirm(' ¿desea eliminar a {{imagen.Titulos }}?');">Eliminar</a>
+        </div>
+      </li>
+      {% endfor %}   
+  </ul>    
+</div>
+
+
+      {% else %}
+      <div id="listaturista">
+        <h1>No hay nuevas rutas registradas</h1>
+      </ul>
         <h2>Error 404</h2>
         <div id="botonregreso">
             <a href="{% url 'index' %}">Incio</a>
         </div>
-        </ul>
-        </div>
+      </ul>
+      </div>
       
         <br>
         <br>
@@ -44,5 +44,5 @@
         <br>
         <br>
       
-      </div>
-      {% endblock %}
+</div>
+{% endblock %}
