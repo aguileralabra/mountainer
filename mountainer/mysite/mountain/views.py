@@ -55,6 +55,9 @@ def galeria(request):
 def contacto(request):
     return render(request, 'contacto.html', {})
 
+def login(request):
+    return render(request, 'login.html', {})
+
 def index(request):
     num_imagen=Imagen.objects.all().count()
     return render(request, 'index.html', context={'num_imagen':num_imagen},)

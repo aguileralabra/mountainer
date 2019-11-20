@@ -60,6 +60,15 @@
 			</script>
 	</head>
 	<body>
+	<div id="vistasesion">
+	{% if user.is_authenticated %}
+	<div style="text-align:center">Hola {{ user.username }} Bienvenido</div>
+	<p><a href="{% url 'logout' %}">Cerrar Sesion</a></p>
+	{% else %}
+	<p>No has iniciado Sesion</p>
+	<a href="{% url 'login' %}">Iniciar Sesion</a>
+	{% endif %}
+	</div>
 		<header>
 			<h1> Mountain Break</h1>
         </header>
