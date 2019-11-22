@@ -23,5 +23,12 @@ Entrega prueba 3 Unidad 3 CRUD sección 002D
 
 pythonanywhere es:
 
-MountainBreaks.pythonanywhere.com
+http://mountainbreaks.pythonanywhere.com
+
+------------------
+Super Usuario de PythonAnywhere.com es:
+
+user: montañistas
+email:mountainbreaks@gmail.com 
+password:afes123456
 
