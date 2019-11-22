@@ -15,4 +15,13 @@ El servidor se levanta con el comando "python manage.py runserver"
 https://www.hektorprofe.net/tutorial/django-formularios-crear-editar-instancias
 Crud use de aqui el elimianr y editar.
 
-"Primera entrega Unidad 2 CRUD sección 002D
+"Primera entrega Unidad 2 CRUD secciï¿½n 002
+
+----------------------------------------------------------------------------------
+
+Entrega prueba 3 Unidad 3 CRUD secciÃ³n 002D
+
+pythonanywhere es:
+
+MountainBreaks.pythonanywhere.com
+
