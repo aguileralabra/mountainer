@@ -16,9 +16,7 @@
   {% endif %}
 {% endif %}
 
-<br><br><br><br>
 
-{# Assumes you setup the password_reser view in your URLconf #}
 <br><br><br><br><br><br>
 
 <div class="container">
@@ -63,7 +61,7 @@
         </div>
         <div class="card-footer">
           <div class="d-flex justify-content-center">
-            <a href="#">Haz olvidado tu contraseña?</a>
+            <a href="{% url 'password_reset' %}">Haz olvidado tu contraseña?</a>
           </div>
         </div>
       </div>
