@@ -23,10 +23,8 @@
     <div class="nombrestr">
       <tr>
         <th>Nombre</th>
-        <th>Apellido</th>
         <th>telefono</th>
-        <th>pais</th>
-        <th>destino</th>
+        <th>reside - destino</th>
         <th>Opinion</th>
         <th>Editar</th>
         <th>Eliminar</th>
@@ -35,11 +33,9 @@
   </div>
     <tr>
         {% for turist in turist_list %}
-      <td>{{ turist.Nombre }}</td>
-      <td>{{ turist.Apellido }}</td>
+      <td>{{ turist.Nombre }} {{ turist.Apellido }}</td>
       <td>{{ turist.telefono }}</td>
-      <td>{{ turist.pais }}</td>
-      <td>{{ turist.lugar }}</td>
+      <td>{{ turist.pais }}-{{ turist.lugar }}</td>
       <td>{{ turist.Opinion }}</td>
         <td><a href="/edit/{{ turist.id }}">Actualizar</a></td>
         <td><a href="/delete/{{ turist.id }}"
