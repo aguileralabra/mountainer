@@ -134,6 +134,10 @@ padding: 5px;
     .container thead tr th{
         margin: 0;
     }
+
+    .container thead tr th a{
+        margin: 2%;
+    }
   }
 
 

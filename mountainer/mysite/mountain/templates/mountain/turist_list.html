@@ -22,11 +22,10 @@
     <thead>
     <div class="nombrestr">
       <tr>
-        <th>Nombre</th>
-        <th>telefono</th>
+        <th>Nombre Completo</th>
         <th>reside - destino</th>
-        <th>Opinion</th>
-        <th>Editar</th>
+        <th>Telefono y Opinion</th>
+        <th>Cambiar</th>
         <th>Eliminar</th>
       </tr>
     </thead>
@@ -34,9 +33,8 @@
     <tr>
         {% for turist in turist_list %}
       <td>{{ turist.Nombre }} {{ turist.Apellido }}</td>
-      <td>{{ turist.telefono }}</td>
       <td>{{ turist.pais }}-{{ turist.lugar }}</td>
-      <td>{{ turist.Opinion }}</td>
+      <td>{{ turist.telefono }}-{{ turist.Opinion }}</td>
         <td><a href="/edit/{{ turist.id }}">Actualizar</a></td>
         <td><a href="/delete/{{ turist.id }}"
           onClick="return confirm(' ¿desea eliminar a {{imagen.Nombre }}?');">Eliminar</a></td>
