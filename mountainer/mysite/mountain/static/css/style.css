@@ -104,16 +104,6 @@ li a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
 #contenedortotal{
 	display: flex;
 	flex-wrap: wrap;
@@ -125,8 +115,13 @@ li a:hover {
     color: rgb(255, 255, 255);
 	width: 60%;
 	padding: 30px;
-	text-align:justify;
+	text-align:center;
 }
+
+#contenido1 h1{
+	text-align: center;
+}
+
 
 
 #contenido2{
