@@ -26,6 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
+EMAIL_BACKEND = 'django.core.mail.backend.console.EmailBackend'
 
 # Application definition
 
@@ -121,3 +122,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'login'

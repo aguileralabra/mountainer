@@ -58,6 +58,9 @@ def contacto(request):
 def login(request):
     return render(request, 'login.html', {})
 
+def password_reset_form(request):
+    return render(request, 'password_reset_form.html', {})
+
 def index(request):
     num_imagen=Imagen.objects.all().count()
     return render(request, 'index.html', context={'num_imagen':num_imagen},)

@@ -1,0 +1,81 @@
+{% extends "registration/login_generic.html" %}
+
+
+{% block content %}
+
+{% if form.errors %}
+
+<p>Tu nombre o contraseña esta errada, porfavor intente nuevamente</p>
+{% endif %}
+
+{% if next %}
+  {% if user.is_authenticated %}
+  <p>Tu cuenta no tiene acceso a la web</p>
+  {% else %}
+  <p>porfavor logearse para ver esta pagina</p>
+  {% endif %}
+{% endif %}
+
+<br><br><br><br>
+
+{# Assumes you setup the password_reser view in your URLconf #}
+<br><br><br><br><br><br>
+
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="card-header">
+          <h3>Iniciar Sesion</h3>
+          <div class="d-flex justify-content-end social_icon">
+            <span><i class="fab fa-facebook-square"></i></span>
+            <span><i class="fab fa-google-plus-square"></i></span>
+            <span><i class="fab fa-twitter-square"></i></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <form method="post" id="form_login">
+              {% csrf_token %}
+
+            
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <td>{{ form.username.label.tag }}</td> 
+              <td>{{ form.username }}</td>
+              
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <td>{{ form.password }}</td><
+            </div>
+            <div class="row align-items-center remember">
+              <input type="checkbox">Recordar Contraseña
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Login" class="btn float-right login_btn">
+              <input type="hidden" name="next" value="{{ next }}"/>
+
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-center">
+            <a href="#">Haz olvidado tu contraseña?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br> 
+  <br> 
+  <br> 
+  <br> 
+
+
+
+
+{% endblock %}

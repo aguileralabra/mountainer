@@ -5,7 +5,12 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
 	path('', include('mountain.urls')),
+]
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 admin.site.site_header = "Administracion de Mountain Break"
